@@ -1,11 +1,12 @@
 library(tidyverse)
-
+## Deliverable 1
 mechaCarData <- read.csv("Resources/MechaCar_mpg.csv") #Import the car data
 head(mechaCarData)
 
 model1 <- lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + AWD + ground_clearance, data = mechaCarData)#Model of multiple linear regression
 summary(model1)
 
+## Deliverable 2
 suspensionData <-  read.csv("Resources/Suspension_Coil.csv")#Import Coil Data
 total_summary <- suspensionData %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD= sd(PSI), .groups= 'keep')#Create the summary table
 total_summary
@@ -13,6 +14,7 @@ total_summary
 lot_summary <- suspensionData %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD= sd(PSI), .groups= 'keep')#Summary table but grouping it by lots
 lot_summary
 
+#Deliverable 3
 sample_table <- suspensionData %>% sample_n(50)#Sampling 50 data points
 
 t.test(sample_table$PSI, mu=mean(suspensionData$PSI))#Compare sample and population means

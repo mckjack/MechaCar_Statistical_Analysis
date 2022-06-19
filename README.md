@@ -40,5 +40,19 @@ To summarize these tests,
 #### Lot 3
 ![Image 7](https://github.com/mckjack/MechaCar_Statistical_Analysis/blob/main/Images/Deliverable_3_4.png)
 
-- For Lot 1 we can reject the null hypothesis since the p-value is below 0.05 therefore concluding the PSI across Lot 1 is statisically different from the population mean.
-- 
+- For Lot 1 we can reject the null hypothesis since the p-value is below 0.05(significance level) therefore concluding the PSI across Lot 1 is statisically different from the population mean.
+- For Lots 2 and 3 we have a p-value above 0.05, the null hypothesis can't be rejected therefore the PSI across Lot 2 and 3 are statistically similar to the population mean. 
+
+## Study Design: MechaCar vs Competition
+To compare the competition to the MechaCar we will dive into a statistical analysis on each of the following metrics listed,
+- braking distance 
+- safety rating
+- horsepower
+- The highest speed achievable 
+
+The null hypothesis would state that the following metrics are statistically similar between both the MechaCar prototype and vehicles from the comptetition(other manufacturers).
+
+To do this test we would do the one-way ANOVA (Analyis of Variance) test. This test commpares the means of all the continuous numerical variables listed above across more than two samples or groups. Hence we would compare means amongst the MechaCar prototype and the other competition. 
+
+Therefore, to perform this test we would need access to all the MechaCar data and the competitions data merged into one dataframe, where the metrics listed above are the names of our columns. The data could be found using the internet or vehicle APIs such as https://www.high-mobility.com/car-api and others.
+
